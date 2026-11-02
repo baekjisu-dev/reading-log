@@ -40,7 +40,7 @@ npx tsc -b        # 빌드 없이 타입 검사만
 
 ## Git
 
-- 작업 브랜치는 `master`이지만 기본(PR 대상) 브랜치는 `main`으로 설정되어 있다.
+- 기본(PR 대상) 브랜치는 `main`이다. 작업은 `feat/...` 같은 브랜치를 만들어 하고 `main`으로 PR을 연다.
 - 커밋 메시지는 `chore: ...` 같은 Conventional Commits 접두어 + 한국어 설명 형식을 쓴다.
 
 ## 명령어

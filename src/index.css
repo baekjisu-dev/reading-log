@@ -109,3 +109,280 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ---------- 독서 기록 ---------- */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 48px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.book-form,
+.book-list {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.field-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.field label {
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.field input,
+.field select {
+  font: inherit;
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 1px;
+}
+
+.field input[aria-invalid='true'] {
+  border-color: #e5484d;
+}
+
+.field-error {
+  font-size: 13px;
+  color: #e5484d;
+}
+
+.primary-button,
+.delete-button {
+  font: inherit;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-button {
+  align-self: flex-end;
+  padding: 8px 20px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.primary-button:hover {
+  border-color: var(--accent);
+}
+
+.list-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.book-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.book-title {
+  color: var(--text-h);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.book-meta {
+  font-size: 14px;
+}
+
+.book-rating {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.delete-button {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.delete-button:hover {
+  border-color: #e5484d;
+  color: #e5484d;
+}
+
+.empty {
+  padding: 12px 0;
+}
+
+/* ---------- 탭 ---------- */
+
+.app-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-tab {
+  font: inherit;
+  font-size: 16px;
+  padding: 8px 20px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.app-tab:hover {
+  color: var(--text-h);
+}
+
+.app-tab[aria-selected='true'] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dev-button {
+  align-self: center;
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 12px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ---------- 통계 ---------- */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.stats-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stats-header h2 {
+  margin: 0;
+}
+
+.stats-header .field {
+  flex: 0 0 auto;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-card,
+.chart-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 14px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.stats-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chart-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.chart {
+  width: 100%;
+  height: 320px;
+}
